@@ -20,7 +20,12 @@ namespace Deliverable1
                 Console.WriteLine("-- Enter the Number: 1 for a Musical Vacation");
                 Console.WriteLine("-- Enter the Number: 2 for a Tropical Vacation");
                 Console.WriteLine("-- Enter the Number: 3 for an Adventurous Vacation");
-                destination = int.Parse(Console.ReadLine());
+
+                string wordInput = Console.ReadLine();
+                if (int.TryParse(wordInput, out destination))
+                {
+                    destination = int.Parse(wordInput);
+                }
                 
                 if (destination < 1 || destination > 3)
                 {
@@ -30,14 +35,17 @@ namespace Deliverable1
 
             while (sizeOfGroup < 1)
             {
-                Console.WriteLine("And how many people going on this trip?");
+                Console.WriteLine("And how many people are going on this trip?");
                 sizeOfGroup = int.Parse(Console.ReadLine());
 
-                if (sizeOfGroup < 0)
+                if (sizeOfGroup < 1)
                 {
                     Console.WriteLine("Invalid Response, Try Again!");
                 }
             }
+
+
+            // Below are the conditions that set the Variable that are inserted in the result phrase!
 
           
             if (destination == 1)
