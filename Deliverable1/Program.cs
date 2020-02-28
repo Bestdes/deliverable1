@@ -6,23 +6,23 @@ namespace Deliverable1
     {
         static void Main(string[] args)
         {
-            int vacationType = 0;
+            int destination = 0;
             int sizeOfGroup = 0;
             string result;
 
-            string destination = "";
+            string vacationType = "";
             string travelMethod = "";
 
 
-            while (vacationType < 1 || vacationType > 3)
+            while (destination < 1 || destination > 3)
             {
                 Console.WriteLine("What type of Vacation would you like to go on?");
-                Console.WriteLine("-- Enter the Number: 1 for Musical");
-                Console.WriteLine("-- Enter the Number: 2 for Tropical");
-                Console.WriteLine("-- Enter the Number: 3 for Adventurous");
-                vacationType = int.Parse(Console.ReadLine());
+                Console.WriteLine("-- Enter the Number: 1 for a Musical Vacation");
+                Console.WriteLine("-- Enter the Number: 2 for a Tropical Vacation");
+                Console.WriteLine("-- Enter the Number: 3 for an Adventurous Vacation");
+                destination = int.Parse(Console.ReadLine());
                 
-                if (vacationType < 1 || vacationType > 3)
+                if (destination < 1 || destination > 3)
                 {
                     Console.WriteLine("Invalid Response, Try Again!");
                 }
@@ -40,17 +40,17 @@ namespace Deliverable1
             }
 
           
-            if (vacationType == 1)
+            if (destination == 1)
             {
-                destination = "New Orleans";
+                vacationType = "New Orleans";
             }
-            if (vacationType == 2)
+            if (destination == 2)
             {
-                destination = "Beach Vacation in Mexico";
+                vacationType = "Beach Vacation in Mexico";
             }
-            if (vacationType == 3)
+            if (destination == 3)
             {
-                destination = "Whitewater Rafting in Grand Canyon";
+                vacationType = "Whitewater Rafting in Grand Canyon";
             }
        
 
@@ -69,7 +69,7 @@ namespace Deliverable1
                 travelMethod = "Charter Flight";
             }
 
-            result = "Based upon your selections it is recommended that your vacation destination be: " + destination + " via " + travelMethod + "!";
+            result = "Based upon your selections it is recommended that your vacation destination be: " + vacationType + " via " + travelMethod + "!";
 
             Console.WriteLine(result);
 
